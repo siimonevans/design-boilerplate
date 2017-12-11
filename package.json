@@ -6,7 +6,7 @@
     "url": "https://github.com/SimonDEvans/design-boilerplate"
   },
   "scripts": {
-    "build": "npm run install && gulp",
+    "build": "yarn && gulp",
     "lint": "eslint .",
     "start": "gulp --dev",
     "validate": "npm ls"
