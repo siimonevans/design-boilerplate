@@ -18,7 +18,7 @@
 Get started with a new project by running the following commands:
 
 ```
-$ git clone git@github.com:SimonDEvans/design-boilerplate.git && cd design-boilerplate
+$ git clone git@github.com:SimonDEvans/design-boilerplate.git
 $ cd design-boilerplate
 $ yarn
 ```
