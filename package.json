@@ -1,6 +1,10 @@
 {
   "author": "design-boilerplate",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimonDEvans/design-boilerplate"
+  },
   "scripts": {
     "build": "npm run install && gulp",
     "lint": "eslint .",
