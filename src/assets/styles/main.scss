@@ -3,7 +3,6 @@
 \*------------------------------------*/
 @import 'vendor/normalize';
 @import 'config/variables';
-@import 'config/styleguide';
 
 /*------------------------------------*\
     $BASE
@@ -13,8 +12,12 @@
 @import 'abstracts/base';
 @import 'abstracts/type';
 
-
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-@import 'components/example-component';
+@import 'components/button';
+
+/*------------------------------------*\
+    $PAGES
+\*------------------------------------*/
+@import 'pages/example-page';
