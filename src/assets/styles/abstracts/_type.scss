@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+
+// Base
+html {
+    font-size: ($base-font-size / 16px) * 100%;
+    line-height: $base-line-height / $base-font-size;
+}
+
+// Families
+@mixin heading-text {
+    font-family: $font--primary;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+@mixin body-text {
+    font-family: $font--primary;
+    font-style: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+}
+
+@mixin quote-text {
+    font-family: $font--secondary;
+    font-style: italic;
+    font-weight: inherit;
+    text-transform: inherit;
+}
+
+// sass-lint:disable single-line-per-selector
+h1, h2, h3, h4, h5, h6,
+.heading-text {
+    @include heading-text;
+}
+// sass-lint:enddisable
+
+html,
+.body-text {
+    @include body-text;
+}
+
+blockquote {
+    @include quote-text;
+}
+
+// Set basic scale
+h1, .xxl    { @include font-size(xxl); }
+h2, .xl     { @include font-size(xl); }
+h3, .l      { @include font-size(l); }
+h4, .m      { @include font-size(m); }
+h5, .s      { @include font-size(s); }
+h6, .xs     { @include font-size(xs); }

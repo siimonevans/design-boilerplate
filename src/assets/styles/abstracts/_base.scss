@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    $BASE DEFAULTS
+\*------------------------------------*/
+
+// Prevent text size change on orientation change.
+// sass-lint:disable no-vendor-prefixes
+html {
+    font-family: $font--primary;
+    -webkit-text-size-adjust: 100%;
+}
+
+// Prevent empty space below images appearing
+img,
+svg {
+    vertical-align: top;
+}
+
+// sass-lint:disable single-line-per-selector
+button, input, select, textarea {
+    font-family: inherit;
+}
+// sass-lint:enddisable

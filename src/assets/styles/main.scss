@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    $CONFIG
+\*------------------------------------*/
+@import 'config/variables';
+@import 'vendor/normalize';
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/base';
+@import 'abstracts/type';
+
+
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
+@import 'components/example-component';
