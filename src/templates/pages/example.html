@@ -1,7 +1,32 @@
 ---
 title: Example Page title
+quote: I am some imported data (from this page)
 ---
 
-<h1>You are at /pages/index.html</h1>
+<div class="example-page">
+    
+    <h1>Example page</h1>
 
-It works. <a href="{{baseurl}}/index.html">Go back to styleguide</a>
+    <p>Include a component:</p>
+    <div>
+        {{> button}}
+    </div>
+    <br />
+
+    <p>Import some data from data file:</p>
+    <div>
+        <blockquote>
+            {{example.welcome}}
+        </blockquote>
+    </div>
+
+    <p>Import some data from page:</p>
+    <div>
+        <blockquote>
+            {{quote}}
+        </blockquote>
+    </div>
+    <br />
+
+    <a href="{{baseurl}}/index.html">Return to index</a>
+</div>
