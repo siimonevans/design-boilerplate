@@ -52,9 +52,8 @@ $ yarn build
 ### JS
 
  - Add and modify JS in `src/assets/scripts`
- - Scripts can be imported as modules or listed in `main.js` depending on skillset
+ - Scripts can be imported as modules or listed in `main.js`
  - Linting available but not enabled by default
-
 
 ### Images
 
