@@ -3,11 +3,13 @@
 \*------------------------------------*/
 
 // Typography
-$font--primary: -apple-system, BlinkMaMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$font--primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$font--secondary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
 $base-font-size: 16px;
 $base-line-height: 25px;
 
-// Base font sizes
+// Base sizes
 $font-sizes: (
     xxl:        38px,
     xl:         30px,
