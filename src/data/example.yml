@@ -1,1 +1,10 @@
-welcome: 'I am some imported data (from example.yml)'
+welcome: I am some imported data (from example.yml)
+
+list: 
+  - Item one
+  - Item two
+  - Item three
+
+name:
+  firstName: Simon
+  lastName: Evans

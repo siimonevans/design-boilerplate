@@ -2,6 +2,30 @@
     $EXAMPLE PAGE
 \*------------------------------------*/
 
+$ep-gutter: 30px;
+
 .example-page {
-    padding: 0 30px 30px;
+    padding: 0 $ep-gutter $ep-gutter;
+
+    p {
+        margin: 0 0 10px;
+    }
+
+    &__wrapper {
+        @include media-query(m) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__block {
+        padding: 20px;
+        margin-bottom: $ep-gutter;
+        background-color: #eee;
+
+        @include media-query(m) {
+            width: calc(1/2*100% - (1 - 1/2)*#{$ep-gutter});
+        }
+    }
 }
