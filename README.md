@@ -18,7 +18,7 @@ A start-point for designing and prototyping in the browser with an emphasis on s
 Get started with a new project by running the following commands:
 
 ```
-$ git clone git@github.com:SimonDEvans/design-boilerplate.git
+$ git clone https://github.com/SimonDEvans/design-boilerplate.git
 $ cd design-boilerplate
 $ yarn
 ```
