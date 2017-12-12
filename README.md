@@ -13,6 +13,10 @@ A start-point for designing and prototyping in the browser with an emphasis on s
  - YAML data imports
  - Image optimisation
 
+## Dependencies
+
+ - Yarn (on OS X install [brew](https://brew.sh) then `brew install yarn`)
+
 ## Quick Start
 
 Get started with a new project by running the following commands:
