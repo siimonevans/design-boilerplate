@@ -118,7 +118,6 @@ gulp.task('templates', (done) => {
 
 // scripts
 const webpackConfig = require('./webpack.config')(config);
-
 gulp.task('scripts', (done) => {
   webpack(webpackConfig, (err, stats) => {
     if (err) {
@@ -174,21 +173,16 @@ gulp.task('serve', () => {
 
   gulp.task('templates:watch', ['templates'], reload);
   gulp.watch(config.templates.watch, ['templates:watch']);
-
   gulp.task('styles:watch', ['styles']);
   gulp.watch(config.styles.watch, ['styles:watch']);
-
   gulp.task('scripts:watch', ['scripts'], reload);
   gulp.watch(config.scripts.watch, ['scripts:watch']);
-
   gulp.task('images:watch', ['images'], reload);
   gulp.watch(config.images.watch, ['images:watch']);
 });
 
-
 // default build task
 gulp.task('default', ['clean'], () => {
-  // define build tasks
   const tasks = [
     'templates',
     'scripts',
