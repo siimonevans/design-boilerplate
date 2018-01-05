@@ -12,6 +12,7 @@ const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack');
+
 const reload = browserSync.reload;
 
 // configuration
@@ -123,6 +124,7 @@ gulp.task('templates', (done) => {
 
 // scripts
 const webpackConfig = require('./webpack.config')(config);
+
 gulp.task('scripts', (done) => {
   webpack(webpackConfig, (err, stats) => {
     if (err) {
@@ -199,7 +201,7 @@ gulp.task('default', ['clean'], () => {
     'scripts',
     'styles',
     'images',
-    'fonts'
+    'fonts',
   ];
 
   // run build
