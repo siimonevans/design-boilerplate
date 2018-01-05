@@ -52,10 +52,5 @@
     "run-sequence": "^1.0.2",
     "scripts-loader": "^0.1.3",
     "webpack": "^1.10.5"
-  },
-  "pre-commit": [
-    "lint",
-    "validate",
-    "test"
-  ]
+  }
 }
