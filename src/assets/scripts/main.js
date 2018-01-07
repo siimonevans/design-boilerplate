@@ -1,2 +1,2 @@
-import { testFunction } from './example';
+import { testFunction } from './examplejQuery';
 testFunction();
