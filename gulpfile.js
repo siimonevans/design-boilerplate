@@ -46,6 +46,10 @@ const config = {
     dest: 'dist/assets/fonts',
     watch: 'src/assets/fonts/**/*',
   },
+  data: {
+    src: 'src/data/**/*',
+    watch: 'src/data/**/*',
+  },
   dev: gutil.env.dev,
 };
 
@@ -172,6 +176,10 @@ gulp.task('images', () =>
 gulp.task('fonts', () =>
   gulp.src(config.fonts.src).pipe(gulp.dest(config.fonts.dest)));
 
+// data
+gulp.task('data', () =>
+  gulp.src(config.data.src))
+
 // server
 gulp.task('serve', () => {
   browserSync({
@@ -192,6 +200,8 @@ gulp.task('serve', () => {
   gulp.watch(config.images.watch, ['images:watch']);
   gulp.task('fonts:watch', ['fonts'], reload);
   gulp.watch(config.fonts.watch, ['fonts:watch']);
+  gulp.task('data:watch', ['templates'], reload);
+  gulp.watch(config.data.watch, ['data:watch']);
 });
 
 // default build task
@@ -202,6 +212,7 @@ gulp.task('default', ['clean'], () => {
     'styles',
     'images',
     'fonts',
+    'data',
   ];
 
   // run build
