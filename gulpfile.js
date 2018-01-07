@@ -18,7 +18,7 @@ const reload = browserSync.reload;
 // configuration
 const config = {
   templates: {
-    src: ['src/templates/**/*', '!src/templates/+(layouts|components)/**'],
+    src: ['src/templates/**/*', '!src/templates/layouts/**'],
     dest: 'dist',
     watch: ['src/templates/**/*', 'src/data/**/*.json'],
     layouts: 'src/templates/layouts/*',
