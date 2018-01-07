@@ -2,7 +2,25 @@
     $BOILERPLATE UI
 \*------------------------------------*/
 
-// Size changer
+// Resizer
+.rp-wrapper {
+    iframe {
+        position: absolute;
+        top: 44px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 100vh;
+        width: 100%;
+        min-width: 450px;
+        border: 0;
+        margin: 0 auto;
+        background-color: #fff;
+        transition: width 700ms ease;
+    }
+}
+
 .rp {
     position: fixed;
     top: 0;
@@ -32,21 +50,4 @@
             color: #333;
         }
     }
-}
-
-// Responsive iframe
-.rp-iframe {
-    position: absolute;
-    top: 44px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 100vh;
-    width: 100%;
-    min-width: 450px;
-    border: 0;
-    margin: 0 auto;
-    background-color: #fff;
-    transition: width 700ms ease;
 }
