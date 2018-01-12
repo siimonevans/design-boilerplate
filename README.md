@@ -80,6 +80,6 @@ $ yarn build
 
 A window resize panel is available, but not by default and must be created on a page-by-page basis. To use it:
 
-- Copy and paste the contents of `templates/pages/resize-default.html` into a new `page` file
-- Change the `url` data field to the filename of the page you wish to view in resize mode
+- Copy and paste the contents of `src/templates/pages/resize-default.html` into a new `pages` file
+- Change the `url` data field to match the filename of the page you wish to view in resize mode
 - For example, to create a resizable version of `pages/homepage.html`, copy the `resize-default.html` example into a new file called `homepage-resizer.html` (or something sensible) and set `url` to `homepage`
