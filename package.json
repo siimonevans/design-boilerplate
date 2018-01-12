@@ -9,7 +9,8 @@
     "build": "yarn && gulp",
     "lint": "eslint .",
     "start": "gulp --dev",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "deploy": "npm run build && dploy"
   },
   "engines": {
     "node": "^4",
@@ -22,6 +23,7 @@
     "babel-preset-stage-2": "^6.11.0",
     "browser-sync": "^2.8.0",
     "del": "^2.2.0",
+    "dploy": "^1.2.0",
     "eslint": "3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-config-standard": "^10.2.1",

@@ -1,0 +1,20 @@
+# Automate styleguide deployment to playground
+# Default host points to playground.torchboxapps.com
+
+# Make a copy of this file and name it `dploy.yaml`
+
+# Update `remote` value with project name
+# E.g: remote: '/htdocs/my-prototype'
+
+design:
+  scheme: "sftp"
+  host: "web-1-a.rslon.torchbox.net"
+  user: "playground"
+  privateKey: "~/.ssh/id_rsa"
+  slots: 4
+  check: false
+  path:
+    local: "dist/"
+    remote: "/htdocs/my-prototype"
+  include:
+    "dist/**": "/"
