@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    $BOILERPLATE UI
+\*------------------------------------*/
+
+// Resizer
+.rp-wrapper {
+    iframe {
+        position: absolute;
+        top: 44px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 100vh;
+        width: 100%;
+        min-width: 450px;
+        border: 0;
+        margin: 0 auto;
+        background-color: #fff;
+        transition: width 700ms ease;
+    }
+}
+
+.rp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 7px 30px 10px 10px;
+    background-color: #2f2f2f;
+    text-align: right;
+
+    &__button {
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        font-size: 12px;
+        border-radius: 0;
+        transition: all 300ms ease;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &--active,
+        &:focus,
+        &:hover {
+            background: #fff;
+            color: #333;
+        }
+    }
+}
