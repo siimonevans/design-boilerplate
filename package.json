@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "start": "gulp --dev",
     "validate": "npm ls",
-    "deploy": "npm run build && dploy"
+    "deploy": "yarn build && dploy"
   },
   "engines": {
     "node": "^4",
