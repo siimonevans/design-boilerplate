@@ -12,6 +12,7 @@ A start-point for designing and prototyping in the browser with an emphasis on s
  - 'Easy' JS usage (you don't _have_ to use ES6, modules, etc)
  - YAML data imports
  - Image optimisation
+ - Automated upload to staging
 
 ## Dependencies
 
@@ -75,6 +76,14 @@ $ yarn build
  - [Handlebars](http://handlebarsjs.com/) syntax
  - Includes support for partials, helpers, etc
  - Example page and component provided by default
+ 
+## Deploying
+
+You can take advantage of the nodejs package [dploy](https://github.com/LeanMeanFightingMachine/dploy) and upload the `dist` directory to a staging environment. To do so you will need to:
+
+ * Make a copy of `example.dploy.yaml` and name it `dploy.yaml`
+ * Modify the `host` `user` and `path.remote` variables
+ * Run `yarn deploy` to start the deployment process
 
 ## Window resize
 
