@@ -6,7 +6,7 @@
 .rp-wrapper {
     iframe {
         position: absolute;
-        top: 0;
+        top: 43px;
         bottom: 0;
         left: 0;
         right: 0;
@@ -20,7 +20,6 @@
         transition: max-width 700ms ease;
 
         @include media-query(m) {
-            top: 44px;
             min-width: 450px;
         }
     }
