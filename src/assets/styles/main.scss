@@ -3,9 +3,9 @@
 \*------------------------------------*/
 @import 'vendor/normalize';
 @import 'config/variables';
-@import 'config/mixins';
-@import 'config/functions';
-@import 'config/boilerplate';
+@import 'config/base/mixins';
+@import 'config/base/functions';
+@import 'config/base/boilerplate';
 
 /*------------------------------------*\
     $BASE
@@ -26,4 +26,4 @@
 /*------------------------------------*\
     $BOILERPLATE
 \*------------------------------------*/
-@import 'config/debug';
+@import 'config/base/debug';
