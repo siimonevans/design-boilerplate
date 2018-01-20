@@ -6,18 +6,22 @@
 .rp-wrapper {
     iframe {
         position: absolute;
-        top: 44px;
+        top: 43px;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
         height: 100vh;
         width: 100%;
-        min-width: 450px;
+        min-width: 100%;
         border: 0;
         margin: 0 auto;
         background-color: #fff;
-        transition: width 700ms ease;
+        transition: max-width 700ms ease;
+
+        @include media-query(m) {
+            min-width: 450px;
+        }
     }
 }
 
@@ -31,23 +35,47 @@
     background-color: #2f2f2f;
     text-align: right;
 
+    .dbp-debug & {
+        outline: 0 !important;
+    }
+
     &__button {
         background: transparent;
         color: #fff;
         cursor: pointer;
         font-size: 12px;
-        border-radius: 0;
+        border-radius: 5px;
         transition: all 300ms ease;
+        line-height: 1.6;
+        display: none;
+
+        @include media-query(m) {
+            display: inline;
+        }
+
+        &--debug {
+            display: inline;
+        }
+
+        .dbp-debug & {
+            outline: 0 !important;
+        }
 
         &:focus {
             outline: 0;
         }
 
         &--active,
-        &:focus,
         &:hover {
             background: #fff;
             color: #333;
         }
     }
+}
+
+.dbp-logo {
+    height: 26px;
+    float: left;
+    margin-left: 20px;
+    fill: #fff;
 }

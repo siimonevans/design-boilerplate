@@ -3,13 +3,13 @@
 \*------------------------------------*/
 @import 'vendor/normalize';
 @import 'config/variables';
+@import 'config/mixins';
+@import 'config/functions';
 @import 'config/boilerplate';
 
 /*------------------------------------*\
     $BASE
 \*------------------------------------*/
-@import 'abstracts/mixins';
-@import 'abstracts/functions';
 @import 'abstracts/base';
 @import 'abstracts/type';
 
@@ -22,3 +22,8 @@
     $PAGES
 \*------------------------------------*/
 @import 'pages/example-page';
+
+/*------------------------------------*\
+    $BOILERPLATE
+\*------------------------------------*/
+@import 'config/debug';

@@ -1,13 +1,18 @@
-<div class="rp" id="rp">
-    <button class="rp__button" data-size="25">S</button>
-    <button class="rp__button" data-size="50">M</button>
-    <button class="rp__button" data-size="75">L</button>
-    <button class="rp__button rp__button--active" data-size="100">Full</button>
+<div class="rp no-debug" id="rp">
+    <svg class="dbp-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.1 43.3"><path class="st0" d="M19.7 0s6.5 6-3 18.5c-8.7 11.2 2 28.1 12.4 24.2 0 0-2.7-3.3-3.5-7-1.5-6.8 1.8-9.2 4.8-11.6 2.8-2.2 7.2-7.1 2.8-14.1 0 0 .1 6-8.1 8 0 .1 8.5-14.3-5.4-18z"/><path class="st0" d="M18 42S2.6 39.5 4.8 23.9c.8-6.1-2.6-8.1-4.8-9.5 0 0 12.2.4 11.3 8C9.9 34.7 15.4 40.2 18 42z"/></svg>
+
+    <button class="rp__button rp__button--debug" id="rp__debug">Debug</button>
+    <button class="rp__button rp__button--resize" data-size="25">S</button>
+    <button class="rp__button rp__button--resize" data-size="50">M</button>
+    <button class="rp__button rp__button--resize" data-size="75">L</button>
+    <button class="rp__button rp__button--resize rp__button--active" data-size="100">Full</button>
 </div>
 
 <script>
     (function() {
-        var resizeButton = document.querySelectorAll('.rp__button');
+        var resizeButton = document.querySelectorAll('.rp__button--resize');
+        var debugButton = document.getElementById('rp__debug');
+        var body = document.querySelector('body');
 
         function loopButtons() {
           for (var i = 0; i < resizeButton.length; i++) {
@@ -18,12 +23,21 @@
             }
 
             this.className += ' rp__button--active';
-            document.getElementsByTagName('iframe')[0].style.width = size + '%';
+            document.getElementsByTagName('iframe')[0].style.maxWidth = size + '%';
           }
         }
 
-        [].forEach.call(resizeButton, function(div) {
-            div.addEventListener('click', loopButtons);
+        [].forEach.call(resizeButton, function(button) {
+            button.addEventListener('click', loopButtons);
         });
+
+        debugButton.onclick = function() {
+            this.classList.toggle('rp__button--active');
+            body.classList.toggle('dbp-debug');
+
+            // Append debug class to iframe contents
+            document.querySelector('iframe').contentWindow.document.body.classList.toggle('dbp-debug');
+        }
+
     }());
 </script>
