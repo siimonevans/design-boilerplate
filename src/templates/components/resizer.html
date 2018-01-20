@@ -1,13 +1,16 @@
-<div class="rp" id="rp">
-    <button class="rp__button" data-size="25">S</button>
-    <button class="rp__button" data-size="50">M</button>
-    <button class="rp__button" data-size="75">L</button>
-    <button class="rp__button rp__button--active" data-size="100">Full</button>
+<div class="rp no-debug" id="rp">
+    <button class="rp__button rp__button--debug" id="rp__debug">Debug</button>
+    <button class="rp__button rp__button--resize" data-size="25">S</button>
+    <button class="rp__button rp__button--resize" data-size="50">M</button>
+    <button class="rp__button rp__button--resize" data-size="75">L</button>
+    <button class="rp__button rp__button--resize rp__button--active" data-size="100">Full</button>
 </div>
 
 <script>
     (function() {
-        var resizeButton = document.querySelectorAll('.rp__button');
+        var resizeButton = document.querySelectorAll('.rp__button--resize');
+        var debugButton = document.getElementById('rp__debug');
+        var body = document.querySelector('body');
 
         function loopButtons() {
           for (var i = 0; i < resizeButton.length; i++) {
@@ -22,8 +25,17 @@
           }
         }
 
-        [].forEach.call(resizeButton, function(div) {
-            div.addEventListener('click', loopButtons);
+        [].forEach.call(resizeButton, function(button) {
+            button.addEventListener('click', loopButtons);
         });
+
+        debugButton.onclick = function() {
+            this.classList.toggle('rp__button--active');
+            body.classList.toggle('dbp-debug');
+
+            // Append debug class to iframe contents
+            document.querySelector('iframe').contentWindow.document.body.classList.toggle('dbp-debug');
+        }
+
     }());
 </script>
