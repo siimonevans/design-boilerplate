@@ -2,6 +2,8 @@
 
 A start-point for designing and prototyping in the browser with an emphasis on speed and simplicity. The aim is to cater for designers with varying front-end skillsets, while still offering the latest features for those who want them.
 
+[:zap: View the demo :zap:](https://sii.im/playground/design-boilerplate/pages/example-resizer.html)
+
 ## Features
 
  - Superfast live reload
