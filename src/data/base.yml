@@ -1,0 +1,33 @@
+logo: http://via.placeholder.com/150x80/cbddea/e9f2f9
+
+navigation:
+  - Item one
+  - Item two
+  - Item three
+  - Item four
+  - Item five
+  - Item six
+
+strapline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec est ullamcorper magna feugiat vulputate non quis velit.
+
+grid:
+  - 
+    heading: I am grid item one
+    image: http://via.placeholder.com/500x500/cbddea/e9f2f9
+  -
+    heading: I am grid item two
+    image: http://via.placeholder.com/500x500/cbddea/e9f2f9
+  -
+    heading: I am grid item three
+    image: http://via.placeholder.com/500x500/cbddea/e9f2f9
+  -
+    heading: I am grid item four
+    image: http://via.placeholder.com/500x500/cbddea/e9f2f9
+  -
+    heading: I am grid item five
+    image: http://via.placeholder.com/500x500/cbddea/e9f2f9
+  -
+    heading: I am grid item six
+    image: http://via.placeholder.com/500x500/cbddea/e9f2f9
+
+footer_text: I am the footer

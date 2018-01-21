@@ -1,0 +1,26 @@
+---
+title: Site header
+---
+
+<header class="site-header">
+    <div class="site-header__inner">
+
+        {{! Use logo image source set in base.yml}}
+        <a href="">
+            <img src="{{base.logo}}">
+        </a>
+
+        <nav class="site-header__navigation">
+
+            {{! Loop through navigation items set in base.yml}}
+            <ul>
+            {{#each base.navigation}}
+                <li class="site-header__navigation-item">
+                    <a href="">{{this}}</a>
+                </li>
+            {{/each}}
+            </ul>
+        </nav>
+
+    </div>
+</header>
