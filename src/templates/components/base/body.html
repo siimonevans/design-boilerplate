@@ -1,0 +1,19 @@
+---
+title: Site body
+---
+
+<main class="site-body">
+
+    {{! Use strapline text set in base.yml}}
+    <h1 class="site-body__strapline">{{base.strapline}}</h1>
+
+    {{! Loop through grid items set in base.yml}}
+    <ul class="site-body__grid">
+        {{#each base.grid}}
+            <li style="background-image: url({{this.image}})">
+                {{this.heading}}
+            </li>
+        {{/each}}
+    </ul>
+    
+</main>

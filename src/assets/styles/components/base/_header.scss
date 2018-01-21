@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $SITE HEADER
+\*------------------------------------*/
+
+.site-header {
+    background-color: #e9f2f9;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 5%;
+        margin: 0 auto;
+    }
+
+    &__navigation {
+        align-self: center;
+        padding-left: 50px;
+
+        &-item {
+            display: inline-block;
+            min-width: 100px;
+
+            > a {
+                display: block;
+                padding: 1px 10px;
+                color: #46484a;
+                text-decoration: none;
+            }
+        }
+    }
+}

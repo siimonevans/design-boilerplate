@@ -19,7 +19,15 @@
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
+
+// Base
+@import 'components/base/header';
+@import 'components/base/body';
+@import 'components/base/footer';
+
+// Custom
 @import 'components/button';
+
 
 /*------------------------------------*\
     $PAGES
