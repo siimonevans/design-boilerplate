@@ -17,6 +17,17 @@ const reload = browserSync.reload;
 
 // configuration
 const config = {
+  coreStyles: {
+    src: 'src/core/styles/main.scss',
+    dest: 'dist/core/styles',
+    watch: 'src/core/styles/**/*',
+    browsers: ['last 1 version'],
+  },
+  coreScripts: {
+    src: './src/core/scripts/main.js',
+    dest: 'dist/core/scripts',
+    watch: 'src/core/scripts/**/*',
+  },
   templates: {
     src: ['src/templates/**/*', '!src/templates/layouts/**'],
     dest: 'dist',
@@ -126,6 +137,21 @@ gulp.task('templates', (done) => {
   done();
 });
 
+// core styles
+gulp.task('coreStyles', () =>
+ gulp.src(config.coreStyles.src)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      includePaths: './node_modules',
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: config.coreStyles.browsers,
+    }))
+    .pipe(gulpif(!config.dev, cssnano({ autoprefixer: false })))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.coreStyles.dest))
+    .pipe(gulpif(config.dev, reload({ stream: true }))));
+
 // scripts
 const webpackConfig = require('./webpack.config')(config);
 
@@ -190,6 +216,8 @@ gulp.task('serve', () => {
     logPrefix: 'BrowserSync',
   });
 
+  gulp.task('coreStyles:watch', ['coreStyles']);
+  gulp.watch(config.coreStyles.watch, ['coreStyles:watch']);
   gulp.task('templates:watch', ['templates'], reload);
   gulp.watch(config.templates.watch, ['templates:watch']);
   gulp.task('styles:watch', ['styles']);
@@ -207,6 +235,7 @@ gulp.task('serve', () => {
 // default build task
 gulp.task('default', ['clean'], () => {
   const tasks = [
+    'coreStyles',
     'templates',
     'scripts',
     'styles',

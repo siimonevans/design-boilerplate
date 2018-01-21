@@ -1,17 +1,20 @@
 /*------------------------------------*\
-    $CONFIG
+    $VENDOR
 \*------------------------------------*/
 @import 'vendor/normalize';
+
+/*------------------------------------*\
+    $CONFIG
+\*------------------------------------*/
 @import 'config/variables';
-@import 'config/base/mixins';
-@import 'config/base/functions';
-@import 'config/base/boilerplate';
+@import 'config/mixins';
+@import 'config/functions';
 
 /*------------------------------------*\
     $BASE
 \*------------------------------------*/
-@import 'abstracts/base';
-@import 'abstracts/type';
+@import 'base/base';
+@import 'base/type';
 
 /*------------------------------------*\
     $COMPONENTS
@@ -22,8 +25,3 @@
     $PAGES
 \*------------------------------------*/
 @import 'pages/example-page';
-
-/*------------------------------------*\
-    $BOILERPLATE
-\*------------------------------------*/
-@import 'config/base/debug';
